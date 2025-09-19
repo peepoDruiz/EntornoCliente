@@ -1,0 +1,7 @@
+.contenedor_alerta {
+    border: 5px solid black;
+    padding: 30px;
+    background-color: lightgrey;
+    color: black;
+    text-align: left;
+}
