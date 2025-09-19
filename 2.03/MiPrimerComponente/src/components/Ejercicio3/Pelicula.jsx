@@ -1,14 +1,14 @@
 import React from 'react';
 import './Pelicula.css';
 
-const Pelicula = ({titulo, direccion, cartela, children}) => {
+const Pelicula = (props) => {
   return (
     <div className='pelicula_alerta'>
-      <img src={cartela} alt={`Cartela de ${titulo}`} className='cartela'/>
+      <img src={props.cartela} alt={`Cartela de ${props.titulo}`} className='cartela'/>
       <div className='texto'>
-        <h2>{titulo}</h2>
-        <h3>{direccion}</h3>
-        <p>{children}</p>
+        <h2>{props.titulo}</h2>
+        <h3>{props.direccion}</h3>
+        <p>{props.children}</p>
       </div>
     </div>
   );

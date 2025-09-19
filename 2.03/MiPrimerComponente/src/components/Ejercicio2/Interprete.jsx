@@ -1,13 +1,13 @@
 import React from 'react'
 import './Interprete.css';
 
-const Interprete = ({foto, nombre, children}) => {
+const Interprete = (props) => {
   return (
     <div className='interprete_alerta'>
-      <img src={foto} alt={`Foto de ${nombre}`} className='foto'/>
+      <img src={props.foto} alt={`Foto de ${props.nombre}`} className='foto'/>
       <div className='texto'>
-        <h2>{nombre}</h2>
-        <p>{children}</p>
+        <h2>{props.nombre}</h2>
+        <p>{props.children}</p>
       </div>
     </div>
   );
