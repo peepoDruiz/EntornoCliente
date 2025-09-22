@@ -11,7 +11,7 @@ function App() {
       <Contenedor>
         <h1>Good Will Hunting</h1>
         <Interprete foto="https://i.pinimg.com/474x/64/37/7d/64377d3546d8a881e2f4428f09b58a9e.jpg" nombre="Robin Williams">
-        Robin McLaurin Williams ​​fue un comediante, actor y actor de voz estadounidense. Ganador de un premio Óscar,
+        Robin McLaurin Williams fue un comediante, actor y actor de voz estadounidense. Ganador de un premio Óscar,
         cinco Globos de Oro, un premio del Sindicato de Actores, dos premios Emmy y tres premios Grammy.
         </Interprete>
         <Pelicula titulo="Good Will Hunting" cartela="https://pics.filmaffinity.com/good_will_hunting-764690099-large.jpg"
