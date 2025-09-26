@@ -2,6 +2,9 @@
 
 import { constructor } from "./libraries/ejercicio1.js";
 import { reportGenerator } from "./libraries/ejercicio2.js";
+import { calcAvg } from "./libraries/ejercicio3.js";
+import { printHobbies } from "./libraries/ejercicio3.js";
+import { printReport } from "./libraries/ejercicio3.js";
 
 //Ejercicio 1.
 console.log("Ejercicio 1.")
@@ -38,3 +41,12 @@ let discente = {
         third: 10
     }
 };
+console.log("Ejercicio 3");
+
+let avgMarkDiscente = calcAvg(discente.marks.first, discente.marks.second, discente.marks.third);
+
+console.log(`La nota media de ${discente[name]} es ${avgMarkDiscente.toLocaleString("es-ES")}.`);
+
+printHobbies(discente.hobbies);
+printReport(discente);
+//Ejercicio 4.
