@@ -1,0 +1,13 @@
+.listado_alerta {
+    color: black;
+    background-color: blueviolet;
+    padding: 5px;
+    border: orange solid 3px;
+    border-radius: 10px;
+}
+
+.listado_alerta button {
+    color: black;
+    background-color: lawngreen;
+    margin: 5px;
+}
