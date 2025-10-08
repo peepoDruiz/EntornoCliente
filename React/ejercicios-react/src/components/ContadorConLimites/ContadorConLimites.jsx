@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ContadorConLimites.css";
 
 const ContadorConLimites = (props) => {
   const initialState = 0;
@@ -12,7 +13,7 @@ const ContadorConLimites = (props) => {
     setCounter(counter - 1);
   };
   return (
-    <div>
+    <div className="contador_alerta">
       <p>{props.children}</p>
       <h2>{counter}</h2>
       <button disabled={counter === 10 ? true : false} onClick={increase}>

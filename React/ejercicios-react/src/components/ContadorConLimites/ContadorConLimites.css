@@ -1,0 +1,13 @@
+.contador_alerta {
+    color: black;
+    background-color: blueviolet;
+    padding: 5px;
+    border: orange solid 5px;
+    border-radius: 10px;
+}
+
+.contador_alerta button {
+    color: black;
+    background-color: lawngreen;
+    margin: 5px;
+}
