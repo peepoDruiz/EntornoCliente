@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import './App.css'
-import Listado from './components/Listado/Listado.jsx'
+import { useState } from 'react';
+import './App.css';
+import Listado from './components/Listado/Listado.jsx';
+import ContadorConLimites from './components/ContadorConLimites/ContadorConLimites.jsx';
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Listado>Hola</Listado>
+      <Listado>Ejercicio 1</Listado>
+      <ContadorConLimites>Ejercicio 2</ContadorConLimites>
     </>
   )
 }
