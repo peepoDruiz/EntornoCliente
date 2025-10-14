@@ -1,5 +1,5 @@
 "use strict";
 
-import { censorDom } from "./Ejercicio1/Ejercicio1.js";
+import { censorDOM } from "./Ejercicio1/Ejercicio1.js";
 
-setTimeout(() => { censorDom }, 2000);
+setTimeout(() => { censorDOM }, 2000);

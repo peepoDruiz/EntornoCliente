@@ -2,22 +2,27 @@
 
 //Ejercicio 1.
 
-
-
 //Recorre el DOM desde la etiqueta body
-
 export const censorDOM = () => {
     const body = document.body;
-    console.log(body);
-    console.log(body.children)
-    console.log(body.children.length)
-    let bodyElement = "feo";
+    let bodyWords = [];
     for(let i = 0; i < body.children.length; i++) {
-        bodyElement = body.children[i];
-        if (bodyElement.includes(sexo)) {
-            body.children[i].innerHTML = "HOLA!";
+        /* console.log("Children")
+        console.log(body.children[i]); */
+        
+        if(body.children[i].innerHTML.includes("sexo")) {
+            bodyWords = body.children[i].innerHTML.split(" ");
+            for (let i = 0; i < bodyWords.length; i++) {
+                /* bodyWords[i].style.color = "blue"; */
+                if (bodyWords[i].includes("sexo")) {
+                    console.log(bodyWords[i]);
+                    bodyWords[i].replace("hola", "sexo")
+                    console.log(bodyWords[i])
+                }
+            }
+            /* body.children[i].style.color = "red"; */
         }
     };
 };
 
-censorDOM();
+setTimeout(() => { censorDOM() }, 2000);
