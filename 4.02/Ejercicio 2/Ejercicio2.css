@@ -1,3 +1,16 @@
+.table {
+    border: solid, 5px, black;
+    background-color: mediumslateblue;
+}
+
+.td {
+    font-size: xx-large;
+    text-align: center;
+    border: solid, black, 2px;
+    padding: 20px;
+    display: inline-flexbox;
+}
+
 .primeNumbers {
     background-color: red;
     font-weight: bold;
