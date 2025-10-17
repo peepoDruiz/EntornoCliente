@@ -1,28 +1,19 @@
 "use strict";
 
 //Ejercicio 1.
-
-//Recorre el DOM desde la etiqueta body
 export const censorDOM = () => {
-    const body = document.body;
-    let bodyWords = [];
-    for(let i = 0; i < body.children.length; i++) {
-        /* console.log("Children")
-        console.log(body.children[i]); */
-        
-        if(body.children[i].innerHTML.includes("sexo")) {
-            bodyWords = body.children[i].innerHTML.split(" ");
-            for (let i = 0; i < bodyWords.length; i++) {
-                /* bodyWords[i].style.color = "blue"; */
-                if (bodyWords[i].includes("sexo")) {
-                    console.log(bodyWords[i]);
-                    bodyWords[i].replace("hola", "sexo")
-                    console.log(bodyWords[i])
-                }
-            }
-            /* body.children[i].style.color = "red"; */
-        }
-    };
+    //Asigno el body del HTML a una variable.
+  let body = document.body;
+    
+  //Recorro el body entero.
+  for (let i = 0; i < body.children.length; i++) {
+    //Si el body incluye la palabra "sexo", la censura.
+    if (body.innerHTML.includes("sexo")) {
+      body.innerHTML = body.innerHTML.replace("sexo", '<span class="censored">Contenido Bloqueado</span>');
+    }
+  }
 };
 
-setTimeout(() => { censorDOM() }, 2000);
+setTimeout(() => {
+  censorDOM();
+}, 2000);
