@@ -28,10 +28,7 @@ const changeColor = (number) => {
   }
 };
 
-for (let i = 1; i < 6; i++) {
-    
-  setInterval(() => {
-    let number = generateRandomNumber();
-    changeColor(number);
+
+setInterval(() => {
+    changeColor(generateRandomNumber());
   }, 1000);
-}
