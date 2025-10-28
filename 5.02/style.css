@@ -1,0 +1,23 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(https://images8.alphacoders.com/116/1163434.jpg);
+    background-size: cover;
+}
+
+.ejercicios {
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 5px solid orange;
+    color: greenyellow;
+    background-color: rgba(151, 86, 212, 0.5);
+    text-align: center;
+    height: 250px;
+    width: 400px;
+    padding-top: 50px;
+}
+
+.creditos {
+    color: white;
+    display: block;
+    text-align: center;
+}
