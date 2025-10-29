@@ -1,7 +1,7 @@
 "use strict";
 
 window.onload = () => {
-    console.log("hola");
+    //Guardo todos los elementos y su contenido en variables.
     let elemento1 = document.querySelector(".elemento1");
     let elemento2 = document.querySelector(".elemento2");
     let elemento3 = document.querySelector(".elemento3");
@@ -9,9 +9,11 @@ window.onload = () => {
     let contenido2 = document.querySelector(".contenido2");
     let contenido3 = document.querySelector(".contenido3");
 
+    //Al hacer clic en cualquier elemento mostrará su contenido.
     elemento1.addEventListener(
       "click",
       () => {
+        //Todos los contenidos tenían en CSS "display: none;". Esto le cambia la clase y no lo oculta.
         contenido1.classList.toggle("contenidosMostrados");
       },
       false
