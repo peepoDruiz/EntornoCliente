@@ -1,0 +1,53 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(232, 230, 235);
+    display: flex;
+    justify-content: center;
+}
+
+#color {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+#chooseColor {
+    width: 350px;
+    height: 200px;
+}
+
+#clear {
+    width: 49%;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#clearAll {
+    width: 49%;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#canvas {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    padding: auto;
+    background-color: white;
+}
+
+table td {
+    width: 10px;
+    height: 10px;
+}
