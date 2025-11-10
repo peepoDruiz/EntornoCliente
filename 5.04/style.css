@@ -46,3 +46,18 @@ body {
     border: solid 1px black;
     margin: 0%;
 }
+
+#victory {
+    display: none;
+}
+
+#victory img {
+    width: 200px;
+}
+
+#reset {
+  background-color: rgb(147, 107, 221);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
