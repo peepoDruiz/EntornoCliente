@@ -9,13 +9,13 @@ body {
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 200px;
+    height: 350px;
 }
 
 
 #pieces img {
     margin: 5px;
-    width: 180px;
+    width: 200px;
     display: inline;
 }
 
