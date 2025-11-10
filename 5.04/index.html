@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica 5.04 Rompecabezas</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <h1>Rompecabezas NieR: Automata</h1>
-    <div id="pieces">
+    <div id="draggableZone">
+      <div class="droppable" id="pieces">
         <h2>Piezas</h2>
-        <img src="./assets/1.jpg" alt="imagen1">
-        <img src="./assets/2.jpg" alt="imagen2">
-        <img src="./assets/3.jpg" alt="imagen3">
-        <img src="./assets/4.jpg" alt="imagen4">
-        <img src="./assets/5.jpg" alt="imagen5">
-        <img src="./assets/6.jpg" alt="imagen6">
-        <img src="./assets/7.jpg" alt="imagen7">
-        <img src="./assets/8.jpg" alt="imagen8">
-        <img src="./assets/9.jpg" alt="imagen9">
-    </div>
-    <div id="board">
-        <div>
-            <div><img src="./assets/1.jpg" alt="imagen1"></div>
-            <div><img src="./assets/4.jpg" alt="imagen4"></div>
-            <div><img src="./assets/7.jpg" alt="imagen7"></div>
-        </div>
-        <div>
-            <div><img src="./assets/2.jpg" alt="imagen2"></div>
-            <div><img src="./assets/5.jpg" alt="imagen5"></div>
-            <div><img src="./assets/8.jpg" alt="imagen8"></div>
-        </div>
-        <div>
-            <div><img src="./assets/3.jpg" alt="imagen3"></div>
-            <div><img src="./assets/6.jpg" alt="imagen6"></div>
-            <div><img src="./assets/9.jpg" alt="imagen9"></div>
-        </div>
+        <img src="./assets/1.jpg" alt="imagen1" class="draggable" id="1" />
+        <img src="./assets/2.jpg" alt="imagen2" class="draggable" id="2" />
+        <img src="./assets/3.jpg" alt="imagen3" class="draggable" id="3" />
+        <img src="./assets/4.jpg" alt="imagen4" class="draggable" id="4" />
+        <img src="./assets/5.jpg" alt="imagen5" class="draggable" id="5" />
+        <img src="./assets/6.jpg" alt="imagen6" class="draggable" id="6" />
+        <img src="./assets/7.jpg" alt="imagen7" class="draggable" id="7" />
+        <img src="./assets/8.jpg" alt="imagen8" class="draggable" id="8" />
+        <img src="./assets/9.jpg" alt="imagen9" class="draggable" id="9" />
+      </div>
+      <div class="droppables" id="board">
+        <div class="droppable" id="div1"></div>
+        <div class="droppable" id="div2"></div>
+        <div class="droppable" id="div3"></div>
+        <div class="droppable" id="div4"></div>
+        <div class="droppable" id="div5"></div>
+        <div class="droppable" id="div6"></div>
+        <div class="droppable" id="div7"></div>
+        <div class="droppable" id="div8"></div>
+        <div class="droppable" id="div9"></div>
+      </div>
     </div>
     <div>
-        <button>Reiniciar partida</button>
+      <button id="reset">Reiniciar partida</button>
     </div>
-</body>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
