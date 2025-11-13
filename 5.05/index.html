@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <form name="formAlbum">
         <fieldset id="infoAlbum">
             <legend>Formulario Discos</legend>
@@ -20,8 +19,7 @@
             <input type="text" name="albumAuthor" placeholder="Tyler, The Creator"> <br>
             <label for="publishYear">Año de publicación:</label> <br>
             <!-- Alex y yo hemos buscado cuando se crearon los discos de música y por eso el mínimo es 1887. -->
-            <input type="number" name="publishYear" min="1887" max="2025" placeholder="Año de publicación (1970)"> <br>
-            
+            <input type="number" name="publishYear" min="1887" max="2025" placeholder="2024"> <br>
             <br>
             <fieldset id="albumGenre">
                 <legend>Género del disco</legend>
@@ -39,11 +37,9 @@
                 <input type="checkbox" name="ost">
                 <label for="ost">Banda Sonora</label>
             </fieldset>
-
             <br>
             <label for="location">Localización</label> <br>
             <input type="text" name="location"> <br>
-            
             <br>
             <fieldset id="borrowedOption">
                 <legend>Prestado</legend>
@@ -52,15 +48,11 @@
                 <input type="radio" name="borrowed" checked>
                 <label for="false">No</label>
             </fieldset>
-
         </fieldset>
-
         <br>
-
-        <input type="button" value="Guardar">
-        <input type="button" value="Mostrar">
+        <input type="button" id="saveAlbum" value="Guardar">
+        <input type="button" id="showAlbums" value="Mostrar">
     </form>
-
     <script type="module" src="./main.js"></script>
 </body>
 </html>
