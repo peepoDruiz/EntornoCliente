@@ -1,6 +1,6 @@
 "use strict";
 
-import { validateForm, getFormData } from "./libraries/library.js";
+import { validateForm, getFormData } from "./forms/formHandlers.js";
 
 window.onload = () => {
     const form = document.forms.formAlbum;
@@ -13,6 +13,7 @@ window.onload = () => {
             if (validateForm(form)) {
                 getFormData(form);
             }
-        }
-    )
+        },
+        false
+    );
 } //Fin del window.onload.

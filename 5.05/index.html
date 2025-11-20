@@ -1,59 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5.05 Formularios y persistencia de datos.</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsGuGKXTKIzp2pq7_s4zyTlHcH2dT7vAXyw&s">
-</head>
-<body>
-    <form name="formAlbum">
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsGuGKXTKIzp2pq7_s4zyTlHcH2dT7vAXyw&s"
+    />
+  </head>
+  <body>
+    <div id="formAndErrors">
+      <form name="formAlbum">
         <fieldset id="infoAlbum">
-            <legend>Formulario Discos</legend>
-            <label for="albumName">Nombre del disco:</label> <br>
-            <input type="text" name="albumName" placeholder="CHROMAKOPIA"> <br>
-            <label for="albumCover">Carátula del disco (URL):</label> <br>
-            <input type="url" name="albumCover" placeholder="https://news.artnet.com/app/news-upload/2024/10/tyler-creator-chromakopia-album.jpg"> <br>
-            <label for="albumAuthor">Grupo de música o intérprete:</label> <br>
-            <input type="text" name="albumAuthor" placeholder="Tyler, The Creator"> <br>
-            <label for="publishYear">Año de publicación:</label> <br>
-            <!-- Alex y yo hemos buscado cuando se crearon los discos de música y por eso el mínimo es 1887. -->
-            <input type="number" name="publishYear" min="1887" max="2025" placeholder="2024"> <br>
-            <br>
-            <fieldset id="albumGenre">
-                <legend>Género del disco</legend>
-                <input type="checkbox" name="rap">
-                <label for="rap">Rap</label>
-                <input type="checkbox" name="trap">
-                <label for="trap">Trap</label>
-                <input type="checkbox" name="regueton">
-                <label for="regueton">Reguetón</label>
-                <br>
-                <input type="checkbox" name="rockAndRoll">
-                <label for="rockAndRoll">Rock & Roll</label>
-                <input type="checkbox" name="pop">
-                <label for="pop">Pop</label>
-                <input type="checkbox" name="ost">
-                <label for="ost">Banda Sonora</label>
-            </fieldset>
-            <br>
-            <label for="location">Localización</label> <br>
-            <input type="text" name="location"> <br>
-            <br>
-            <fieldset id="borrowedOption">
-                <legend>Prestado</legend>
-                <input type="radio" name="borrowed">
-                <label for="true">Sí</label>
-                <input type="radio" name="borrowed" checked>
-                <label for="false">No</label>
-            </fieldset>
+          <legend>Formulario Discos</legend>
+          <label for="albumName">Nombre del disco:</label> <br />
+          <input type="text" name="albumName" placeholder="CHROMAKOPIA" />
+          <br />
+          <label for="albumCover">Carátula del disco (URL):</label> <br />
+          <input
+            type="url"
+            name="albumCover"
+            placeholder="https://news.artnet.com/app/news-upload/2024/10/tyler-creator-chromakopia-album.jpg"
+          />
+          <br />
+          <label for="albumAuthor">Grupo de música o intérprete:</label> <br />
+          <input
+            type="text"
+            name="albumAuthor"
+            placeholder="Tyler, The Creator"
+          />
+          <br />
+          <label for="publishYear">Año de publicación:</label> <br />
+          <!-- Alex y yo hemos buscado cuando se crearon los discos de música y por eso el mínimo es 1887. -->
+          <input
+            type="number"
+            name="publishYear"
+            min="1887"
+            max="2025"
+            placeholder="2024"
+          />
+          <br />
+          <br />
+          <fieldset id="albumGenre">
+            <legend>Género del disco</legend>
+            <input type="checkbox" name="rap" />
+            <label for="rap">Rap</label>
+            <input type="checkbox" name="trap" />
+            <label for="trap">Trap</label>
+            <input type="checkbox" name="regueton" />
+            <label for="regueton">Reguetón</label>
+            <br />
+            <input type="checkbox" name="rockAndRoll" />
+            <label for="rockAndRoll">Rock & Roll</label>
+            <input type="checkbox" name="pop" />
+            <label for="pop">Pop</label>
+            <input type="checkbox" name="ost" />
+            <label for="ost">Banda Sonora</label>
+          </fieldset>
+          <br />
+          <label for="location">Localización</label> <br />
+          <input type="text" name="location" /> <br />
+          <br />
+          <fieldset id="borrowedOption">
+            <legend>Prestado</legend>
+            <input
+              type="radio"
+              name="borrowed"
+              id="borrowed-yes"
+              value="true"
+            />
+            <label for="borrowed-yes">Sí</label>
+            <input
+              type="radio"
+              name="borrowed"
+              id="borrowed-no"
+              value="false"
+              checked
+            />
+            <label for="borrowed-no">No</label>
+          </fieldset>
         </fieldset>
-        <br>
-        <input type="button" id="saveAlbum" value="Guardar">
-        <input type="button" id="showAlbums" value="Mostrar">
-    </form>
+        <br />
+        <input type="button" id="saveAlbum" value="Guardar" />
+        <input type="button" id="showAlbums" value="Mostrar" />
+      </form>
+      <div id="errors">
+        <h1>Errores en el formulario:</h1>
+        <div id="warnings">
+          <p class="hide" id="albumNameError">El nombre del disco debe tener, al menos, 5 caracteres.</p>
+          <p class="hide" id="albumAuthorError">El grupo de música o el intérprete debe tener, al menos, 5 caracteres.</p>
+          <p class="hide" id="publishYearError">El año de publicación debe estar entre 1887 y 2025</p>
+          <p class="hide" id="genreError">Debes elegir, al menos, un género musical.</p>
+          <p class="hide" id="locationError">El formato de localización es: ES-001AA.</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./main.js"></script>
-</body>
+  </body>
 </html>
