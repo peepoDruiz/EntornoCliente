@@ -6,6 +6,7 @@ window.onload = () => {
     const form = document.forms.formAlbum;
 
     const saveForm = document.getElementById("saveAlbum");
+    const showAlbums = document.getElementById("showAlbums");
 
     saveForm.addEventListener (
         "click",
@@ -13,6 +14,14 @@ window.onload = () => {
             if (validateForm(form)) {
                 getFormData(form);
             }
+        },
+        false
+    );
+
+    showAlbums.addEventListener (
+        "click",
+        () => {
+
         },
         false
     );

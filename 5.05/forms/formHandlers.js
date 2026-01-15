@@ -1,7 +1,7 @@
 "use strict";
 
 import { validateTextLength, validateCheckBox, validateRegExp, validateNumber } from "../libraries/library.js";
-import { showErrors, hideErrors } from "../ui/css-utils.js";
+import { showErrors, hideErrors, inputError, hideInputError } from "../ui/css-utils.js";
 
 const nameError = document.getElementById("albumNameError");
 const authorError = document.getElementById("albumAuthorError");
@@ -23,8 +23,10 @@ const validateForm = (form) => {
     if (inputs[i].name === "location") {
       if (validateRegExp(inputs[i].value, expLocation)) {
         hideErrors(locationError);
+        hideInputError(inputs[i]);
       } else {
         showErrors(locationError);
+        inputError(inputs[i]);
         formValidated = false;
       }
     }
@@ -32,29 +34,37 @@ const validateForm = (form) => {
       if (validateTextLength(inputs[i].value, 5)) {
         if (inputs[i].name === "albumName") {
             hideErrors(nameError);
+            hideInputError(inputs[i]);
         } else if (inputs[i].name === "albumAuthor") {
             hideErrors(authorError);
+            hideInputError(inputs[i]);
         }
       } else {
         if (inputs[i].name === "albumName") {
             showErrors(nameError);
+            inputError(inputs[i]);
         } else if (inputs[i].name === "albumAuthor") {
             showErrors(authorError);
+            inputError(inputs[i]);
         }
         formValidated = false;
       }
     } else if (inputs[i].type === "number") {
       if (validateNumber(inputs[i].value, 1887, 2025)) {
         hideErrors(publishYearError);
+        hideInputError(inputs[i]);
       } else {
         showErrors(publishYearError);
+        inputError(inputs[i]);
         formValidated = false;
       }
     } else if (inputs[i].type === "checkbox") {
       if (validateCheckBox(checkBoxes)) {
         hideErrors(genreError);
+        hideInputError(inputs[i]);
       } else {
         showErrors(genreError);
+        inputError(inputs[i]);
         formValidated = false;
       }
     }
