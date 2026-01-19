@@ -1,43 +1,14 @@
 import React, { useState } from "react";
 import matriculados from "../json/matriculados.json";
-import Discente from "./Discente";
-import { filtrarCurso } from "../libraries/funciones.js";
+import ListadoDiscentes from "./ListadoDiscentes.jsx";
+import { filtrar } from "../libraries/funciones.js";
 
 const Matricula = () => {
   const [discentes, setDiscentes] = useState(matriculados.discentes);
 
-  const filtrarSegundoDAW = () => {
-    const filtrados = matriculados.discentes.filter((discente) =>
-      discente.curso.includes("2DAW"),
-    );
-    setDiscentes(filtrados);
-  };
-
-  const filtrarPrimero = () => {
-    const filtrados = matriculados.discentes.filter((discente) =>
-      discente.curso.includes("1"),
-    );
-    setDiscentes(filtrados);
-  };
-
-  const filtrarDAW = () => {
-    const filtrados = matriculados.discentes.filter((discente) =>
-      discente.curso.includes("DAW"),
-    );
-    setDiscentes(filtrados);
-  };
-
-  const filtrarLectores = () => {
-    const filtrados = matriculados.discentes.filter((discente) =>
-      discente.aficiones.includes("lectura"),
-    );
-    setDiscentes(filtrados);
-  };
-
   const ordenarListado = () => {
     //Ordena el listado actual por apellidos
 
-    //Código de la IA (no lo entiendo)
     const ordenados = [...discentes];
     ordenados.sort((a, b) => {
       const apellidoA = a.apellidos;
@@ -52,39 +23,45 @@ const Matricula = () => {
     setDiscentes(matriculados.discentes);
   };
 
-  const desmatricular = () => {
-    //Desmatricula un discente
-  };
-
   return (
     <>
       <div>
         <button
           onClick={() => {
-            setDiscentes(filtrarCurso(discentes, "2DAW"));
+            setDiscentes(filtrar(matriculados.discentes, "2DAW", "curso"));
           }}
         >
           Discentes 2ºDAW
         </button>
-        <button onClick={filtrarPrimero}>Discentes cursando 1º</button>
-        <button onClick={filtrarDAW}>Discentes DAW</button>
-        <button onClick={filtrarLectores}>Discentes lectores</button>
+        <button
+          onClick={() => {
+            setDiscentes(filtrar(matriculados.discentes, "1", "curso"));
+          }}
+        >
+          Discentes cursando 1º
+        </button>
+        <button
+          onClick={() => {
+            setDiscentes(filtrar(matriculados.discentes, "DAW", "curso"));
+          }}
+        >
+          Discentes DAW
+        </button>
+        <button
+          onClick={() => {
+            setDiscentes(
+              filtrar(matriculados.discentes, "lectura", "aficiones"),
+            );
+          }}
+        >
+          Discentes lectores
+        </button>
         <button onClick={ordenarListado}>Ordenar listado</button>
         <button onClick={reiniciarListado}>Reiniciar listado</button>
-        <button>Desmatricular</button>
       </div>
-      <div>
-        <h2>Discentes:</h2>
-        <div onClick={(evento) => {
-          console.log(evento.target)
-        }}>
-          {discentes.length
-            ? discentes.map((discente, index) => {
-                return <Discente key={index} discente={discente} />;
-              })
-            : "No hay discentes"}
-        </div>
-      </div>
+
+      <ListadoDiscentes/>
+      
     </>
   );
 };

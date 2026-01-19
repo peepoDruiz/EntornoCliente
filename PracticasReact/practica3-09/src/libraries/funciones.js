@@ -1,15 +1,14 @@
 "use strict";
 
-const arrayToString = (array) => {
-    array.join(" - ");
-};
-
-const filtrarCurso = (datosAFiltrar, filtro) => {
+const filtrar = (datosAFiltrar, filtro, propiedad) => {
     const filtrados = datosAFiltrar.filter(dato =>
-      dato.curso.includes(filtro)
+      dato[propiedad].includes(filtro)
     );
-    console.log(filtrados);
     return filtrados;
 }
 
-export { arrayToString, filtrarCurso };
+const borrarElemento = () => {
+    
+}
+
+export { filtrar };
