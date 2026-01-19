@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import matriculados from "../json/matriculados.json";
 import Discente from "./Discente";
+import { filtrarCurso } from "../libraries/funciones.js";
 
 const Matricula = () => {
   const [discentes, setDiscentes] = useState(matriculados.discentes);
 
   const filtrarSegundoDAW = () => {
-    const filtrados = matriculados.discentes.filter(discente =>
-      discente.curso.includes("2DAW")
+    const filtrados = matriculados.discentes.filter((discente) =>
+      discente.curso.includes("2DAW"),
     );
     setDiscentes(filtrados);
   };
 
   const filtrarPrimero = () => {
-    const filtrados = matriculados.discentes.filter(discente =>
-      discente.curso.includes("1")
+    const filtrados = matriculados.discentes.filter((discente) =>
+      discente.curso.includes("1"),
     );
     setDiscentes(filtrados);
   };
 
   const filtrarDAW = () => {
-    const filtrados = matriculados.discentes.filter(discente =>
-      discente.curso.includes("DAW")
+    const filtrados = matriculados.discentes.filter((discente) =>
+      discente.curso.includes("DAW"),
     );
     setDiscentes(filtrados);
   };
 
   const filtrarLectores = () => {
-    const filtrados = matriculados.discentes.filter(discente =>
-      discente.aficiones.includes("lectura")
+    const filtrados = matriculados.discentes.filter((discente) =>
+      discente.aficiones.includes("lectura"),
     );
     setDiscentes(filtrados);
   };
@@ -55,11 +56,16 @@ const Matricula = () => {
     //Desmatricula un discente
   };
 
-
   return (
     <>
       <div>
-        <button onClick={filtrarSegundoDAW}>Discentes 2ºDAW</button>
+        <button
+          onClick={() => {
+            setDiscentes(filtrarCurso(discentes, "2DAW"));
+          }}
+        >
+          Discentes 2ºDAW
+        </button>
         <button onClick={filtrarPrimero}>Discentes cursando 1º</button>
         <button onClick={filtrarDAW}>Discentes DAW</button>
         <button onClick={filtrarLectores}>Discentes lectores</button>
@@ -69,11 +75,15 @@ const Matricula = () => {
       </div>
       <div>
         <h2>Discentes:</h2>
-        {discentes.length
-          ? discentes.map((discente, index) => {
-              return <Discente key={index} discente={discente} />;
-            })
-          : "No hay discentes"}
+        <div onClick={(evento) => {
+          console.log(evento.target)
+        }}>
+          {discentes.length
+            ? discentes.map((discente, index) => {
+                return <Discente key={index} discente={discente} />;
+              })
+            : "No hay discentes"}
+        </div>
       </div>
     </>
   );

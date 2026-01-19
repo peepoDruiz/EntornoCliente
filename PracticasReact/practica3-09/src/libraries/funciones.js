@@ -4,4 +4,12 @@ const arrayToString = (array) => {
     array.join(" - ");
 };
 
-export { arrayToString };
+const filtrarCurso = (datosAFiltrar, filtro) => {
+    const filtrados = datosAFiltrar.filter(dato =>
+      dato.curso.includes(filtro)
+    );
+    console.log(filtrados);
+    return filtrados;
+}
+
+export { arrayToString, filtrarCurso };
