@@ -8,7 +8,10 @@ const ListadoDiscentes = ({lista}) => {
         <h2>Discentes:</h2>
         <div
           onClick={(evento) => {
-            console.log(evento.target);
+            console.log(evento.target.id === "desmatriculador");
+            if (evento.target) {
+              console.log("boton");
+            }
           }}
         >
           {lista.length

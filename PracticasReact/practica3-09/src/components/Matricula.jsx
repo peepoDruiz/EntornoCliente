@@ -1,23 +1,10 @@
 import React, { useState } from "react";
 import matriculados from "../json/matriculados.json";
 import ListadoDiscentes from "./ListadoDiscentes.jsx";
-import { filtrar } from "../libraries/funciones.js";
+import { filtrar, ordenarLista } from "../libraries/funciones.js";
 
 const Matricula = () => {
   const [discentes, setDiscentes] = useState(matriculados.discentes);
-
-  const ordenarListado = () => {
-    //Ordena el listado actual por apellidos
-
-    const ordenados = [...discentes];
-    ordenados.sort((a, b) => {
-      const apellidoA = a.apellidos;
-      const apellidoB = b.apellidos;
-
-      return apellidoA.localeCompare(apellidoB);
-    });
-    setDiscentes(ordenados);
-  };
 
   const reiniciarListado = () => {
     setDiscentes(matriculados.discentes);
@@ -56,7 +43,9 @@ const Matricula = () => {
         >
           Discentes lectores
         </button>
-        <button onClick={ordenarListado}>Ordenar listado</button>
+        <button onClick={() => {
+          setDiscentes(ordenarLista(discentes, "apellidos"))
+        }}>Ordenar listado</button>
         <button onClick={reiniciarListado}>Reiniciar listado</button>
       </div>
 
