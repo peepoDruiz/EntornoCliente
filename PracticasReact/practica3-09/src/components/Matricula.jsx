@@ -60,7 +60,7 @@ const Matricula = () => {
         <button onClick={reiniciarListado}>Reiniciar listado</button>
       </div>
 
-      <ListadoDiscentes/>
+      <ListadoDiscentes lista={discentes}/>
       
     </>
   );

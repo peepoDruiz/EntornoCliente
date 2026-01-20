@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Discente from './Discente.jsx';
-import matriculados from "../json/matriculados.json";
 
-const ListadoDiscentes = () => {
-    const [discentes, setDiscentes] = useState(matriculados.discentes);
+const ListadoDiscentes = ({lista}) => {
   return (
     <>
         <div>
@@ -13,8 +11,8 @@ const ListadoDiscentes = () => {
             console.log(evento.target);
           }}
         >
-          {discentes.length
-            ? discentes.map((discente, index) => {
+          {lista.length
+            ? lista.map((discente, index) => {
                 return <Discente key={index} discente={discente} />;
               })
             : "No hay discentes"}
