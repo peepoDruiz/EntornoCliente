@@ -2,7 +2,7 @@
 
 const filtrar = (datosAFiltrar, filtro, propiedad) => {
   const filtrados = datosAFiltrar.filter((dato) =>
-    dato[propiedad].includes(filtro),
+    dato[propiedad].includes(filtro)
   );
   return filtrados;
 };
@@ -18,8 +18,11 @@ const ordenarLista = (datos, propiedad) => {
   return ordenados;
 };
 
-const borrarElemento = () => {
-  //Pedir ayuda
+const borrarElemento = (datos, idABorrar) => {
+  const discenteBorrado = datos.filter((dato => 
+    parseInt(dato.id) !== parseInt(idABorrar)
+  ));
+  return discenteBorrado;
 };
 
-export { filtrar, ordenarLista };
+export { filtrar, ordenarLista, borrarElemento };

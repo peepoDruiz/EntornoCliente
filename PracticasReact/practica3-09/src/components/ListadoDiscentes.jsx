@@ -1,28 +1,21 @@
-import React, { useState } from 'react';
-import Discente from './Discente.jsx';
+import React, { useState } from "react";
+import Discente from "./Discente.jsx";
+import { borrarElemento } from "../libraries/funciones.js";
 
-const ListadoDiscentes = ({lista}) => {
+const ListadoDiscentes = ({ lista }) => {
   return (
     <>
-        <div>
+      <div>
         <h2>Discentes:</h2>
-        <div
-          onClick={(evento) => {
-            console.log(evento.target.id === "desmatriculador");
-            if (evento.target) {
-              console.log("boton");
-            }
-          }}
-        >
+        
           {lista.length
             ? lista.map((discente, index) => {
                 return <Discente key={index} discente={discente} />;
               })
             : "No hay discentes"}
         </div>
-      </div>
     </>
-  )
-}
+  );
+};
 
-export default ListadoDiscentes
+export default ListadoDiscentes;
