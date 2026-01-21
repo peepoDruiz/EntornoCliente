@@ -1,0 +1,15 @@
+.contenedorPelicula {
+    border: solid 5px white;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.resumen {
+    margin: 15px;
+}
+
+img {
+    width: 400px;
+    border: solid 2px white;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
