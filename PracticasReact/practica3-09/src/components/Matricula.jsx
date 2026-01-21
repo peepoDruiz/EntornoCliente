@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import matriculados from "../json/matriculados.json";
 import ListadoDiscentes from "./ListadoDiscentes.jsx";
-import { filtrar, ordenarLista, borrarElemento } from "../libraries/funciones.js";
+import {
+  filtrar,
+  ordenarLista,
+  borrarElemento,
+} from "../libraries/funciones.js";
 
 const Matricula = () => {
   const [discentes, setDiscentes] = useState(matriculados.discentes);
@@ -45,10 +49,17 @@ const Matricula = () => {
         </button>
         <button
           onClick={() => {
-            setDiscentes(ordenarLista(discentes, "apellidos"));
+            setDiscentes(ordenarLista(discentes, "apellidos", true));
           }}
         >
-          Ordenar listado
+          Ordenar listado (A - Z)
+        </button>
+        <button
+          onClick={() => {
+            setDiscentes(ordenarLista(discentes, "apellidos", false));
+          }}
+        >
+          Ordenar listado (Z - A)
         </button>
         <button onClick={reiniciarListado}>Reiniciar listado</button>
       </div>
@@ -59,9 +70,7 @@ const Matricula = () => {
           }
         }}
       >
-        <ListadoDiscentes
-          lista={discentes}
-        />
+        <ListadoDiscentes lista={discentes} />
       </div>
     </>
   );
