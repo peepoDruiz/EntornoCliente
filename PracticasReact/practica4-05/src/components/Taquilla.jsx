@@ -1,12 +1,12 @@
-import React from 'react';
-import { formatearEuro } from '../libraries/funciones.js';
+import React from "react";
+import { formatearEuro } from "../libraries/funciones.js";
 
-const Taquilla = ({totalRecaudado}) => {
+const Taquilla = ({ totalRecaudado }) => {
   return (
     <>
-    <button>Taquilla</button> <p>{formatearEuro(totalRecaudado)}</p>
+      <p>Total recaudado: {formatearEuro(totalRecaudado)}.</p>
     </>
   );
-}
+};
 
 export default Taquilla;

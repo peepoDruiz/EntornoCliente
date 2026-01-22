@@ -1,15 +1,31 @@
 .contenedorPelicula {
-    border: solid 5px white;
-    border-radius: 20px;
-    padding: 15px;
+  border: solid 5px white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .resumen {
-    margin: 15px;
+  margin: 15px;
 }
 
-img {
-    width: 400px;
-    border: solid 2px white;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+.cartelera {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cartelera img {
+  width: 400px;
+  border: solid 2px white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.taquilla {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
 }
