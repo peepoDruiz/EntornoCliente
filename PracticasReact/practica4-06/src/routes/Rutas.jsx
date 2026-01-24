@@ -18,7 +18,7 @@ const Rutas = () => {
             <Route path='*' element={<Error/>}/>
         </Routes>
     </>
-  )
+  );
 }
 
 export default Rutas

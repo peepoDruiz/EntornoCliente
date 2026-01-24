@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Contacto = () => {
@@ -12,7 +11,7 @@ const Contacto = () => {
             navegar('/');
         }}/>
     </>
-  )
+  );
 }
 
-export default Contacto
+export default Contacto;

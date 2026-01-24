@@ -12,7 +12,7 @@ const Productos = () => {
             navegar('/');
         }}/>
     </>
-  )
+  );
 }
 
 export default Productos;

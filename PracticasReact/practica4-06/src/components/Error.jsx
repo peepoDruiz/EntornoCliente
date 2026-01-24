@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Error = () => {
@@ -12,7 +11,7 @@ const Error = () => {
             navegar('/');
         }}/>
     </>
-  )
+  );
 }
 
 export default Error

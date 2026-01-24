@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const AcercaDe = () => {
@@ -12,7 +11,7 @@ const AcercaDe = () => {
             navegar('/');
         }}/>
     </>
-  )
+  );
 }
 
 export default AcercaDe

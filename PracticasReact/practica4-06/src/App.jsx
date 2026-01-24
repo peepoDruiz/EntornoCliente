@@ -9,7 +9,7 @@ function App() {
       <Menu/>
       <Rutas/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
