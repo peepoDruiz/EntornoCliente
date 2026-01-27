@@ -1,11 +1,16 @@
-import React from 'react'
+import '../css/Contenedor.css';
 
-const Contenedor = () => {
+const Contenedor = (props) => {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      <div className={props.clase}>
+        <h2>{props.titulo}</h2>
+        <div>
+          {props.children}
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Contenedor
+export default Contenedor;

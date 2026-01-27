@@ -8,4 +8,4 @@ const PeliculaDetalle = () => {
   )
 }
 
-export default PeliculaDetalle
+export default PeliculaDetalle;

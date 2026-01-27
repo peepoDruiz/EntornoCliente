@@ -1,0 +1,19 @@
+.pelicula {
+  border: solid 3px #ccc;
+  width: 200px;
+  height: 340px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+  background-color: #333;
+  overflow: hidden;
+}
+
+.pelicula img {
+  width: 100%;
+}
+
+.pelicula h2 {
+  font-size: small;
+  padding: 5px;
+  text-decoration: underline;
+}
