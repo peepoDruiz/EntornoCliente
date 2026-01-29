@@ -8,7 +8,7 @@ function App() {
     <>
       <Contenedor titulo="Películas" clase="header" />
       <Menu />
-      <Contenedor clase="contenido-principal">
+      <Contenedor>
         <Rutas />
       </Contenedor>
       <Contenedor titulo="Pie de página" clase="footer" />

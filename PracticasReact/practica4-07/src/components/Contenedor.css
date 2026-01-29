@@ -11,24 +11,11 @@
   width: 100%;
 }
 
-.contenido-principal {
-  position: absolute;
-  top: 90px;
-  display: flex;
-  flex-direction: column;
-  background-color: #222;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
 .inicio {
   display: flex;
   flex-direction: column;
-  background-color: #222;
-  padding: 50px;
-  width: 100%;
-  justify-content: center;
+  position: relative;
+  top: 90px;
   align-items: center;
 }
 

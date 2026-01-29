@@ -6,7 +6,7 @@ const Error = () => {
 
   return (
     <>
-        <h1>Eres retrasado y feo.</h1>
+        <h1>Esta página no existe.</h1>
         <input type="button" value="Volver a inicio" onClick={() => {
             navegar('/');
         }}/>

@@ -1,5 +1,5 @@
 import Contenedor from "./Contenedor.jsx";
-import "../css/ContenedorPelicula.css";
+import "./ContenedorPelicula.css";
 
 const ContenedorPelicula = ({ pelicula }) => {
   return (

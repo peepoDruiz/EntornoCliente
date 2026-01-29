@@ -2,7 +2,7 @@ import React from "react";
 import peliculas from "../json/peliculas.json";
 import ContenedorPelicula from "../components/ContenedorPelicula.jsx";
 import Contenedor from "../components/Contenedor.jsx";
-import "../css/Peliculas.css";
+import "../components/Peliculas.css";
 
 const Peliculas = () => {
   const listadoPeliculas = peliculas.peliculas;
