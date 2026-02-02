@@ -12,8 +12,6 @@ const Interpretes = () => {
   listadoInterpretes.forEach(pelicula => {
     interpretes = [...interpretes, ...pelicula.actores]
   });
-
-  console.log(interpretes);
   
   
   return (

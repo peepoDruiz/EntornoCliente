@@ -1,6 +1,4 @@
 .header {
-  position: absolute;
-  top: 0;
   background-color: rgb(149, 95, 219);
   color: #ccc;
   height: 60px;
@@ -9,14 +7,28 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-shrink: 0;
+}
+
+.contenido-principal {
+  flex: 1 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .inicio {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 90px;
   align-items: center;
+  justify-content: center;
+}
+
+.peliculas, .interpretes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .inicio img {
@@ -26,31 +38,12 @@
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-.peliculas {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  top: 90px;
-  justify-content: center;
-  gap: 50px;
-}
-
-.interpretes {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  top: 90px;
-  justify-content: center;
-  gap: 50px;
-}
 
 .footer {
-  position: relative;
+  flex-shrink: 0;
   background-color: rgb(149, 95, 219);
   color: #ccc;
-  height: 90px;
+  height: 60px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
