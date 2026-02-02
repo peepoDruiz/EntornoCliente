@@ -2,11 +2,11 @@ import React from "react";
 import peliculas from "../json/peliculas.json";
 import ContenedorPelicula from "../components/ContenedorPelicula.jsx";
 import Contenedor from "../components/Contenedor.jsx";
-import "../components/Peliculas.css";
+import "../components/Contenedor.css";
 
 const Peliculas = () => {
+  
   const listadoPeliculas = peliculas.peliculas;
-  console.log(listadoPeliculas);
 
   return (
     <>

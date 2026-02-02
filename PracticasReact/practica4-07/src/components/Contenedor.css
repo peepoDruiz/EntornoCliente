@@ -26,15 +26,34 @@
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
+.peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  top: 90px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.interpretes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  top: 90px;
+  justify-content: center;
+  gap: 50px;
+}
+
 .footer {
+  position: relative;
   background-color: rgb(149, 95, 219);
   color: #ccc;
-  height: 60px;
+  height: 90px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
