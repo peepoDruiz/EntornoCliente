@@ -1,9 +1,21 @@
-import React from 'react'
+import peliculas from "../json/peliculas.json";
+import Contenedor from "../components/Contenedor.jsx";
 
 const Galeria = () => {
+
+  const listadoPeliculas = peliculas.peliculas;
+
   return (
     <>
-      <h2>Esta es la página de Galería</h2>
+      <Contenedor titulo="Galería de películas">
+        <div className="galeria-peliculas">
+          {listadoPeliculas.length
+            ? listadoPeliculas.map((pelicula, index) => (
+                <Contenedor clase="galeria" key={index}><img src={pelicula.cartelera} alt={pelicula.nombre} /></Contenedor>
+              ))
+            : "No hay películas"}
+        </div>
+      </Contenedor>
     </>
   )
 }
