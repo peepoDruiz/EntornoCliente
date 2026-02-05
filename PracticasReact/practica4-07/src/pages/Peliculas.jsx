@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import peliculas from "../json/peliculas.json";
 import ContenedorPelicula from "../components/ContenedorPelicula.jsx";
 import Contenedor from "../components/Contenedor.jsx";
