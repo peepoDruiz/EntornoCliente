@@ -7,7 +7,7 @@ const Formulario = () => {
     caratulaDisco: "",
     autorDisco: "",
     fechaPublicacionDisco: "",
-    generos: "",
+    generos: [],
   };
 
   //Estado para los valores del disco
@@ -18,10 +18,21 @@ const Formulario = () => {
     setDisco({ ...disco, [name]: value });
   };
 
-  const actualizarDatoCheck = (evento) => {
-    const { name } = evento.target;
-    const value = disco[name] === "" ? evento.target.value : "";
-    setDisco({ ...disco, [name]: value });
+  const añadirDato = (evento) => {
+    const { name, value } = evento.target;
+    if (disco[name].includes(value)) {
+      let arrayGeneros = disco[name];
+      let nuevaLista = [];
+      arrayGeneros.map((genero) => {
+        if (genero !== value) {
+          nuevaLista = [...nuevaLista, genero]
+        }
+      })
+      setDisco(...disco[name], nuevaLista)
+    } else {
+      setDisco({ ...disco, [name]: [...disco[name], value] });
+    }
+    
   };
 
   return (
@@ -79,24 +90,53 @@ const Formulario = () => {
         <br />
         <label>Género/s:</label>
         <br />
-        <label>
+        <label htmlFor="rap">
           Rap
-          <input name="rap" id="rap" type="checkbox" value="rap" />
+          <input
+            name="generos"
+            id="rap"
+            type="checkbox"
+            value="rap"
+            onChange={(evento) => {
+              añadirDato(evento);
+            }}
+          />
         </label>
-        <label>
+        <label htmlFor="regueton">
           Reguetón
           <input
-            name="regueton"
+            name="generos"
             id="regueton"
             type="checkbox"
             value="regueton"
+            onChange={(evento) => {
+              añadirDato(evento);
+            }}
           />
         </label>
-        <label>
-          Pop <input name="pop" id="pop" type="checkbox" value="pop" />
+        <label htmlFor="pop">
+          Pop
+          <input
+            name="generos"
+            id="pop"
+            type="checkbox"
+            value="pop"
+            onChange={(evento) => {
+              añadirDato(evento);
+            }}
+          />
         </label>
-        <label>
-          Rock <input name="rock" id="rock" type="checkbox" value="rock" />
+        <label htmlFor="rock">
+          Rock
+          <input
+            name="generos"
+            id="rock"
+            type="checkbox"
+            value="rock"
+            onChange={(evento) => {
+              añadirDato(evento);
+            }}
+          />
         </label>
         <br />
         <label>¿Prestado?</label>
