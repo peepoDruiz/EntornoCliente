@@ -20,19 +20,14 @@ const Formulario = () => {
 
   const añadirDato = (evento) => {
     const { name, value } = evento.target;
-    if (disco[name].includes(value)) {
-      let arrayGeneros = disco[name];
-      let nuevaLista = [];
-      arrayGeneros.map((genero) => {
-        if (genero !== value) {
-          nuevaLista = [...nuevaLista, genero]
-        }
-      })
-      setDisco(...disco[name], nuevaLista)
+    const listaActual = disco[name];
+
+    if (listaActual.includes(value)) {
+      const nuevaLista = listaActual.filter((genero) => genero !== value);
+      setDisco({ ...disco, [name]: nuevaLista });
     } else {
-      setDisco({ ...disco, [name]: [...disco[name], value] });
+      setDisco({ ...disco, [name]: [...listaActual, value] });
     }
-    
   };
 
   return (
